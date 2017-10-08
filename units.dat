@@ -1,0 +1,87 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; This is our units database.  All units are expressed in terms of the MKS
+;; (i.e., meter/kilogram/second) basic units
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; length: base unit is the meter
+(in (0.0254 (m 1)))
+(ft (0.3048 (m 1)))
+(yd (0.9144 (m 1)))
+(mi (1609.344 (m 1)))
+(nmi (1852 (m 1))) ;; nautical mile
+(furlong (201.16800 (m 1)))
+(au (149598000000 (m 1))) ;; astronomical unit
+(ly (9460528400000000 (m 1))) ;; light year
+(a (0.0000000001 (m 1))) ;; angstrom
+(nm (0.000000001 (m 1))) ;; nanometer
+(micron (0.000001 (m 1))) ;; "micro"-meter
+(mm (0.001 (m 1)))
+(cm (0.01 (m 1)))
+(km (1000 (m 1)))
+(chain (20.1168 (m 1)))  ;; 10 chains in a furlong
+(rod (4.0292 (m 1)))     ;; 5.5 yards
+
+;; mass: base unit is the kilogram
+(mg (0.000001 (kg 1)))
+(g (0.001 (kg 1)))
+(oz (0.0283495231 (kg 1)))
+(lbm (0.45359237 (kg 1)))
+(ton (907.18474 (kg 1)))
+
+; time: base unit is the second
+(fs (0.000000000000001 (sec 1))) ;; femtosecond
+(ms (0.001 (sec 1)))             ;; millisecond
+(min (60 (sec 1)))
+(hr  (3600 (sec 1)))
+(day (86400 (sec 1)))
+(fortnight (1209600 (sec 1)))
+(year (31556926 (sec 1)))
+(century (3155692600 (sec 1)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Everything from here on down is a derived unit
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;; speed
+(knot (0.51444444 (m 1)(sec -1)))  ;; 1 knot = 1 nautical mile per hour
+(mph (0.44704 (m 1)(sec -1)))
+
+;; area
+(acre (4046.85642 (m 2))) ;; (1 chain)(1 furlong)
+(ha (10000 (m 2)))   ;; hectare
+
+;; volume
+(l (0.001 (m 3)))    ;; liter
+(cup (0.000236588237 (m 3)))     ;; U.S. cup = 48 tsp
+(pt (0.000473176473 (m 3)))      ;; U.S. pint = 2 cups
+(qt (0.000946325946 (m 3)))      ;; U.S. quart = 2 pints
+(gal (0.00378541178 (m 3)))      ;; U.S. gallon = 4 quarts
+(board-foot (0.002360 (m 3)))
+(cord (3.62455636 (m 3)))        ;; 128 cubic feet == 4 ft x 4 ft x 8 ft
+(peck (0.008809768 (m 3)))
+(bushel (0.035239072 (m 3)))     ;; 4 pecks
+(tbs (0.0000147867648 (m 3)))    ;; tablespoon = 3 tsp
+(tsp (0.00000492892159 (m 3)))   ;; teaspoon
+
+
+;; force
+(N (1 (kg 1)(m 1)(sec -2)))                ;; newton
+(dyn (0.00001 (kg 1)(m 1)(sec -2)))        ;; dyne
+(lbf (4.44822162 (kg 1)(m 1)(sec -2)))     ;; pound force
+(pdl (0.138254954376 (kg 1)(m 1)(sec -2))) ;; poundal
+
+;; energy, or work
+(joule (1 (kg 1)(m 2)(sec -2)))                   ;; joule
+(erg (0.0000001 (kg 1)(m 2)(sec -2)))
+(foot-pound (1.35581795 (kg 1)(m 2)(sec -2))) ;; = (1 (ft 1)(lbf 1)))
+(BTU (1055.05585 (kg 1)(m 2)(sec -2)))        ;; British thermal unit
+(cal (4.18400 (kg 1)(m 2)(sec -2)))
+
+;; power
+(watt (1 (kg 1)(m 2)(sec -3)))         ;; 1 joule/sec
+(hp (745.699872 (kg 1)(m 2)(sec -3)))  ;; 33,000 foot-pounds(force)/min
